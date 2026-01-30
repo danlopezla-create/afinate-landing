@@ -1,11 +1,44 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Afinate | Agencia de Inteligencia Financiera">
+	<main>
+		<h1>Agencia de <span class="text-gradient">Inteligencia Financiera</span></h1>
+		<p class="instructions">
+			Potenciando el crecimiento de las PyMEs con <strong>Agentes Financieros de IA</strong>.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<li><strong>Asistente:</strong> Conciliación contable automática.</li>
+			<li><strong>Analista:</strong> Estados financieros en tiempo real.</li>
+			<li><strong>Manager:</strong> Presupuestos y proyecciones con IA.</li>
+		</ul>
+	</main>
 </Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		font-family: sans-serif;
+	}
+	.text-gradient {
+		background-image: linear-gradient(45deg, #4f39fa, #da62c4 30%, white 60%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+</style>
